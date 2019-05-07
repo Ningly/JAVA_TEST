@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <!--告知spring在创建容器时要扫描的包。当配置了此标签之后，spring创建容器就会去指定的包及子包下找对应的注解；
+        标签是在一个context的名称空间里，所以必须先导入context名称空间
+    -->
+    <context:component-scan base-package="com"></context:component-scan>
+    <!--配置QueryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+    </bean>
+    <!--配置c3p0连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" ></property>
+        <property name="jdbcUrl" value="jdbc:sqlserver://localhost:1433;DatabaseName=Tutoral" ></property>
+        <property name="user" value="sa" ></property>
+        <property name="password" value="Sa123456" ></property>
+    </bean>
+</beans>

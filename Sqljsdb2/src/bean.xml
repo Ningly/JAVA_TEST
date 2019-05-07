@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/beans ">
+    <!--配置资源：把对象的创建交给spring来管理-->
+    <!--配置Service-->
+    <bean id="studentsService" class="service.impl.StudentsServiceImpl">
+        <property name="studentDao" ref="studentDao"></property>
+    </bean>
+
+    <!--配置Dao-->
+    <bean id="studentDao" class="dao.impl.StudentDaoImpl">
+        <property name="runner" ref="runner"></property>
+    </bean>
+    <!--配置QueryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+    </bean>
+    <!--配置c3p0连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" ></property>
+        <property name="jdbcUrl" value="jdbc:sqlserver://localhost:1433;DatabaseName=Tutoral" ></property>
+        <property name="user" value="sa" ></property>
+        <property name="password" value="Sa123456" ></property>
+    </bean>
+
+</beans>

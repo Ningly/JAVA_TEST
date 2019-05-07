@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--配置customerService-->
+    <bean id="customerService" class="com.service.iml.CustomerService"></bean>
+    
+    <!--配置AOP-->
+    <!--第一步：把通知/增强类型交给spring来管理-->
+    <bean id="logger" class="com.utils.Logger"></bean>
+    <!--第二部：aop配置-->
+    <aop:config>
+        <aop:pointcut id="pt" expression="execution(* com.service.iml.*.*(..))"/>
+        <!--第三步：配置切面 id属性用于给切面提供一个唯一标识  ref属性：关联通知/增强类型-->
+        <aop:aspect id="aspect" ref="logger">
+            <!--<aop:pointcut id="pt" expression="execution(public void com.service.iml.CustomerService.saveCustomer())"/>-->
+            <!--<aop:pointcut id="pt" expression="execution(* com.service.iml.*.*(..))"/>-->
+            <!--配置通知/增强类型方法在何时执行 method:用于指定增强的方法 pointcut-ref：关联切入点表达式-->
+            <aop:before method="printLogger" pointcut-ref="pt"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

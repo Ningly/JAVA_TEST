@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AnnotationAOP_WithoutXml/AnnotationAOP_WithoutXml.iml" filepath="$PROJECT_DIR$/AnnotationAOP_WithoutXml/AnnotationAOP_WithoutXml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AnnotationConfigIOC/AnnotationConfigIOC.iml" filepath="$PROJECT_DIR$/AnnotationConfigIOC/AnnotationConfigIOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AnnotationIOC/AnnotationIOC.iml" filepath="$PROJECT_DIR$/AnnotationIOC/AnnotationIOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoProject.iml" filepath="$PROJECT_DIR$/DemoProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JdbcTemplateDemo/JdbcTemplateDemo.iml" filepath="$PROJECT_DIR$/JdbcTemplateDemo/JdbcTemplateDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDataSource/MyDataSource.iml" filepath="$PROJECT_DIR$/MyDataSource/MyDataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProxyDemo1/ProxyDemo1.iml" filepath="$PROJECT_DIR$/ProxyDemo1/ProxyDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOP/SpringAOP.iml" filepath="$PROJECT_DIR$/SpringAOP/SpringAOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOP_AdviceType/SpringAOP_AdviceType.iml" filepath="$PROJECT_DIR$/SpringAOP_AdviceType/SpringAOP_AdviceType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringDI/SpringDI.iml" filepath="$PROJECT_DIR$/SpringDI/SpringDI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProject/SpringProject.iml" filepath="$PROJECT_DIR$/SpringProject/SpringProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProject2/SpringProject2.iml" filepath="$PROJECT_DIR$/SpringProject2/SpringProject2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProject3/SpringProject3.iml" filepath="$PROJECT_DIR$/SpringProject3/SpringProject3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sqljsdb2/Sqljsdb2.iml" filepath="$PROJECT_DIR$/Sqljsdb2/Sqljsdb2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sqljsdbc/Sqljsdbc.iml" filepath="$PROJECT_DIR$/Sqljsdbc/Sqljsdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sqljsdbc2Ioc/Sqljsdbc2Ioc.iml" filepath="$PROJECT_DIR$/Sqljsdbc2Ioc/Sqljsdbc2Ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sqljsdbc_WithoutXml/Sqljsdbc_WithoutXml.iml" filepath="$PROJECT_DIR$/Sqljsdbc_WithoutXml/Sqljsdbc_WithoutXml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mave_javase/src/main/main.iml" filepath="$PROJECT_DIR$/mave_javase/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_portal/maven_portal_dao/src/main/main1.iml" filepath="$PROJECT_DIR$/maven_portal/maven_portal_dao/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_portal/maven_portal_dao/src/test/test.iml" filepath="$PROJECT_DIR$/maven_portal/maven_portal_dao/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mave_javase/src/test/test1.iml" filepath="$PROJECT_DIR$/mave_javase/src/test/test1.iml" />
+    </modules>
+  </component>
+</project>

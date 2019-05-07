@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/beans ">
+
+    <!--Spring的依赖注入：
+        注入的方式有3中：
+            1. 使用构造函数注入
+            2. 使用set方法注入
+            3. 使用注解注入
+        注入的数据类型有3中：
+            1. 基本类型和String类型
+            2. 其它bean类型【自定义类型】（必须是在spring的配置文件中出现过的bean类型）
+            3. 复杂类型（集合类型）
+    -->
+    <!--构造函数注入：
+        涉及的标签：constructor-arg
+        标签的属性：
+            type:指定参数的类型。
+            index:指定参数的索引位置，从0开始
+            name:指定参数的名称            一般用它
+            ======上面三个属性是指给哪个参数赋值的，下面两个属性是指赋什么值的==============================
+            value:指定基本数据类型或String类型的数据
+            ref:指定其它bean类型数据
+        标签出现的位置：
+            写在bean标签内部
+    -->
+    <!--<bean id="customerService" class="service.impl.CustomerServiceImpl">
+        <constructor-arg name="driver" value="fasdf"></constructor-arg>
+        <constructor-arg name="port" value="3306"></constructor-arg>
+        <constructor-arg name="today" ref="now"></constructor-arg>
+    </bean>-->
+    <bean id="now" class="java.util.Date"></bean>
+
+
+    <!--set方法注入
+        涉及的标签：property
+        标签的属性：
+            name:指定参数的名称            一般用它
+            ======上面三个属性是指给哪个参数赋值的，下面两个属性是指赋什么值的==============================
+            value:指定基本数据类型或String类型的数据
+            ref:指定其它bean类型数据
+         标签出现的位置：
+            写在bean标签内部
+    -->
+    <!--<bean id="customerService" class="service.impl.CustomerServiceImpl2">
+        <property name="driver" value="fafda"></property>
+        <property name="port" value="1245"></property>
+        <property name="today" ref="now"></property>
+    </bean>-->
+
+
+    <!--复杂类型注入
+        数据结构相同，标签可以互相
+    -->
+    <bean id="customerService" class="service.impl.CustomerServiceImpl3">
+        <property name="myStrs">
+            <array>
+                <value>aaaa</value>
+                <value>bbbb</value>
+                <value>cccc</value>
+                <value>ddd</value>
+            </array>
+        </property>
+        <property name="myList">
+            <list>
+                <value>aaaa</value>
+                <value>bbbb</value>
+                <value>cccc</value>
+                <value>ddd</value>
+            </list>
+        </property>
+        <property name="mySet">
+            <list>
+                <value>aaaa</value>
+                <value>bbbb</value>
+                <value>cccc</value>
+                <value>ddd</value>
+            </list>
+        </property>
+        <property name="myProp">
+            <props>
+                <prop key="a">aaa</prop>
+                <prop key="b">bb</prop>
+            </props>
+        </property>
+        <property name="myMap">
+            <map>
+                <entry key="fdas" value="fas"></entry>
+                <entry key="aa">
+                    <value>bb</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

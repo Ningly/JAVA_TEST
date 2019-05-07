@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/beans ">
+    <!--配置资源：把对象的创建交给spring来管理-->
+    <bean id="customerService" class="service.impl.CustomerServiceImpl" scope="singleton" init-method="init" destroy-method="destory"></bean>
+    <!--<bean id="customerDao" class="dao.impl.CustomerDaoImpl"></bean>-->
+    
+    <!--配置使用静态工厂创建bean对象-->
+    <!--用factory.StaticFactory类中的getCustomerService方法创建对象，存入容器中，用id=staticCustomerService来取-->
+    <!--<bean id="staticCustomerService" class="factory.StaticFactory" factory-method="getCustomerService"></bean>-->
+    
+    <!--配置使用实例工厂创建bean对象-->
+    <!--1. 先创建一个实例工厂对象  2. 再创建一个使用实例工厂中getCustomerService()方法，来创建对象-->
+    <!--<bean id="instanceFactory" class="factory.InstanceFactory"></bean>
+    <bean id="instanceCustomerService" factory-bean="instanceFactory" factory-method="getCustomerService"></bean>-->
+    
+</beans>
